@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+}
+.color-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-inputs.color-input-item {
+  margin: 4px;
+}
+.color-inputs.color-input-item input {
+  outline: 0;
+  height: 40px;
+  width: 40px;
+}
+.color-inputs .palette-count select {
+  height: 34px;
+  margin: 4px;
+}
+.palette {
+  display: flex;
+  border: 1px solid red;
+  flex-wrap: nowrap;
+  height: calc(100% - 48px);
+}
