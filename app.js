@@ -8,7 +8,7 @@ function run(){
     [colorInputOne, colorInputTwo, paletteCount].forEach((colorInput) => {
         colorInput.addEventListener("input", function(){
             //CALL A FUNCTION WHICH GENERATES COLORS
-
+            generatePalette(colorInputOne.value,colorInputTwo.value,paletteCount.value);
         });
     });
 }
@@ -24,10 +24,12 @@ function generatePalette(color1, color2,paletteCount){
     colorPalette.forEach(colorPalette =>{
         const paletteItem = document.createElement("div");
         paletteItem.classList.add("palette-item");
-        pall
-    })
+        paletteItem.style.setProperty("--palette-color", colorPalette);
+
+        paletteContainer.appendChild(paletteItem);
+    });
 }
 
-window.addEventListener("load", () =>{
+window.addEventListener("load", (event) => {
     run();
-});
+  });
